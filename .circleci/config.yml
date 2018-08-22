@@ -1,14 +1,10 @@
 version: 2
 jobs:
-  node:
-    docker:
+  working_directory: ~/tmp
+  docker:
       - image: circleci/node:8
-    steps:
+  steps:
       - checkout
-      - run:
-          name: jest tests
-          command: |
-            mkdir -p test-results/jest
-            yarn run test
-      - store_test_results:
-          path: test-results
+      - run: npm install
+      - run: nom test
+
