@@ -33,6 +33,10 @@ export default class HomeContainer extends Component {
     }
   }
 
+  sum = (a, b) => {
+    return a + b;
+  }
+
   addNote = item => {
     this.setState(prevState => {
       const newExistingTasks = [...prevState.existingTasks, { key: item }];
@@ -45,7 +49,7 @@ export default class HomeContainer extends Component {
 
   deleteItem = item => {
     this.setState(prevState => {
-      const newArray = this.state.existingTasks.slice();
+      const newArray = prevState.existingTasks.slice();
       const index = newArray.indexOf(item);
       newArray.splice(index, 1);
       return {
