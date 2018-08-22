@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-  docker:
+    docker:
       - image: circleci/node:8
-  steps:
+    steps:
       - checkout
       - run: npm install
       - run: nom test
