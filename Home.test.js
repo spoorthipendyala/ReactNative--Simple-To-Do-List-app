@@ -7,6 +7,6 @@ import renderer from "react-test-renderer";
         expect(true).toBe(true)
       });
       it("dummy test is going to fail", () => {
-        expect(true).toBe(true)
+        expect(true).toBe(false)
       });
 });
